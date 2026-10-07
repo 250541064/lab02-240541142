@@ -1,0 +1,6 @@
+-- =====================================================
+-- Föy 02 / Görev 2 — Dört tablonun DDL'i
+-- ER diyagramınızı tablolara dönüştürün: egitmenler,
+-- uyeler, dersler, kayitlar. Birincil ve yabancı
+-- anahtarları unutmayın. Tablo oluşturma SIRASI önemlidir!
+-- =====================================================

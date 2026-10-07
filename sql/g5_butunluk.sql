@@ -1,0 +1,7 @@
+-- =====================================================
+-- Föy 02 / Görev 5 — Referans bütünlüğünü sınama
+-- 1) Var olmayan bir ders_id ile kayitlar'a INSERT deneyin.
+-- 2) Kaydı olan bir dersi dersler'den DELETE etmeyi deneyin.
+-- Aldığınız HATA mesajlarını sonuc/g5.txt dosyasına yapıştırın
+-- ve dosyanın sonuna 1-2 cümleyle neden engellendiğini yazın.
+-- =====================================================

@@ -1,0 +1,5 @@
+-- =====================================================
+-- Föy 02 / Görev 3 — Dört CSV'nin yüklenmesi
+-- COPY komutlarını FK sırasına dikkat ederek yazın.
+-- Doğrulama sorgusunun çıktısını sonuc/g3.txt'ye kaydedin.
+-- =====================================================
