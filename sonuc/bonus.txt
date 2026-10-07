@@ -1,0 +1,30 @@
+========== ALTER TABLE ile CHECK kısıtı ekleme ==========
+
+Komut:
+ALTER TABLE dersler
+    ADD CONSTRAINT chk_kontenjan_pozitif CHECK (kontenjan > 0);
+
+Sonuç:
+ALTER TABLE
+
+
+========== CHECK kısıtını ihlal eden INSERT denemesi ==========
+
+Komut:
+INSERT INTO dersler (ders_id, ad, egitmen_id, kontenjan)
+VALUES (999, 'Test Dersi', 1, 0);
+
+Hata mesajı:
+ERROR:  new row for relation "dersler" violates check constraint "chk_kontenjan_pozitif"
+DETAIL:  Failing row contains (999, Test Dersi, 1, 0).
+
+
+========== Açıklama ==========
+
+CHECK kısıtı, bir sütuna girilebilecek değerlerin belirli bir koşulu
+sağlamasını zorunlu kılar. kontenjan > 0 kısıtı tanımlandıktan sonra
+PostgreSQL, dersler tablosuna her INSERT veya UPDATE işleminde bu koşulu
+denetler; koşulu karşılamayan (kontenjan = 0 veya negatif) hiçbir değere
+izin vermez ve işlemi hata mesajıyla reddeder. Bu sayede iş kuralları
+(bir dersin en az 1 kontenjana sahip olması) veritabanı düzeyinde
+güvence altına alınmış olur.

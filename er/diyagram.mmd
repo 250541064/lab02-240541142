@@ -1,7 +1,30 @@
-%% =====================================================
-%% Föy 02 / Görev 1 — ER diyagramınızı buraya yazın
-%% Mermaid erDiagram sözdizimi: https://mermaid.live
-%% Örnek bir satır (silin ve kendi tasarımınızı yazın):
-%%   MUSTERI ||--o{ SIPARIS : verir
-%% =====================================================
 erDiagram
+    EGITMEN ||--o{ DERS : "verir"
+    UYE ||--o{ KAYIT : "kaydolur"
+    DERS ||--o{ KAYIT : "icerir"
+
+    EGITMEN {
+        int egitmen_id PK
+        string ad
+        string brans
+    }
+
+    DERS {
+        int ders_id PK
+        string ad
+        int egitmen_id FK
+        int kontenjan
+    }
+
+    UYE {
+        int uye_id PK
+        string ad
+        int dogum_yili
+    }
+
+    KAYIT {
+        int kayit_id PK
+        int uye_id FK
+        int ders_id FK
+        date tarih
+    }

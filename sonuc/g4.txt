@@ -1,0 +1,76 @@
+========== Soru 4.1 — Her dersin adı ve eğitmeninin adı ==========
+
+              ders_adi               |  egitmen_adi   
+-------------------------------------+----------------
+ Fonksiyonel Antrenman — Orta        | Burak Demir
+ Pilates Matwork — Başlangıç         | Mustafa Arslan
+ Boks Temelleri — İleri              | Mustafa Arslan
+ Core Güçlendirme — Orta            | Zeynep Erdoğan
+ Kickboks — Başlangıç                | Elif Koç
+ Esneklik ve Denge — Orta           | Mustafa Arslan
+ Fonksiyonel Antrenman — Başlangıç  | Mustafa Bulut
+ Kıdemli Fitness — Başlangıç        | Elif Koç
+ Gençlik Yüzme — İleri              | Selim Güneş
+ Esneklik ve Denge — İleri          | Burak Demir
+ Boks Temelleri — Orta               | Leyla Kaya
+ Kuvvet Antrenmanı — Başlangıç      | Mustafa Arslan
+ Crossfit WOD — Orta                 | Tolga Arslan
+ Kuvvet Antrenmanı — Orta           | Melek Aslan
+ Kıdemli Fitness — İleri            | Selim Güneş
+ Yüzme Teknikleri — Başlangıç       | Melek Aslan
+ İleri Pilates — Başlangıç          | Elif Koç
+ Kardiyo Dayanıklılık — Başlangıç   | Burak Demir
+ Kickboks — İleri                    | Leyla Kaya
+ Esneklik ve Denge — Başlangıç      | Melek Aslan
+ Pilates Matwork — İleri             | Mustafa Bulut
+ Kardiyo Dayanıklılık — İleri       | Selim Güneş
+ İleri Pilates — Orta               | Burak Demir
+ Sabah Yogası — Orta                 | Selim Güneş
+ Gençlik Yüzme — Orta               | Mustafa Bulut
+ Core Güçlendirme — Başlangıç       | Ceren Polat
+ Pilates Matwork — Orta              | Tolga Arslan
+ Boks Temelleri — Başlangıç         | Zeynep Erdoğan
+ Sabah Yogası — Başlangıç           | Zeynep Erdoğan
+ Kıdemli Fitness — Orta             | Mustafa Bulut
+(30 rows)
+
+
+========== Soru 4.2 — Her eğitmenin verdiği ders sayısı (çoktan aza) ==========
+
+   egitmen_adi    | ders_sayisi 
+------------------+-------------
+ Burak Demir      |           4
+ Mustafa Arslan   |           4
+ Mustafa Bulut    |           4
+ Selim Güneş      |           4
+ Elif Koç         |           3
+ Melek Aslan      |           3
+ Zeynep Erdoğan   |           3
+ Leyla Kaya       |           2
+ Tolga Arslan     |           2
+ Ceren Polat      |           1
+(10 rows)
+
+
+========== Soru 4.3 — En çok kayıt alan 5 dersin adı ve kayıt sayısı ==========
+
+         ders_adi              | kayit_sayisi 
+------------------------------+--------------
+ Core Güçlendirme — Orta     |           23
+ Esneklik ve Denge — İleri   |           19
+ İleri Pilates — Başlangıç   |           18
+ Kardiyo Dayanıklılık — İleri |           18
+ Kuvvet Antrenmanı — Başlangıç |           18
+(5 rows)
+
+
+========== Soru 4.4 — Hiç kaydı olmayan derslerin adı ==========
+
+              ders_adi              
+------------------------------------
+ Esneklik ve Denge — Orta
+ Fonksiyonel Antrenman — Orta
+ Kardiyo Dayanıklılık — Başlangıç
+ Kickboks — Başlangıç
+(4 rows)
+

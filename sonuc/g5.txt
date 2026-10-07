@@ -1,0 +1,31 @@
+========== Deneme 1: Var olmayan ders_id ile INSERT ==========
+
+Komut:
+INSERT INTO kayitlar (kayit_id, uye_id, ders_id, tarih)
+VALUES (9999, 1, 9999, '2026-01-01');
+
+Hata mesajı:
+ERROR:  insert or update on table "kayitlar" violates foreign key constraint "kayitlar_ders_id_fkey"
+DETAIL:  Key (ders_id)=(9999) is not present in table "dersler".
+
+
+========== Deneme 2: Kaydı olan bir dersi DELETE etmeye çalışma ==========
+
+Komut:
+DELETE FROM dersler WHERE ders_id = 4;
+
+Hata mesajı:
+ERROR:  update or delete on table "dersler" violates foreign key constraint "kayitlar_ders_id_fkey" on table "kayitlar"
+DETAIL:  Key (ders_id)=(4) is still referenced from table "kayitlar".
+
+
+========== Açıklama ==========
+
+Veritabanı bu işlemleri engellemektedir çünkü REFERENCES ile tanımlanan
+yabancı anahtar (foreign key) kısıtları referans bütünlüğünü (referential
+integrity) korur. İlk denemede, kayitlar tablosunun ders_id sütunu yalnızca
+dersler tablosunda mevcut olan ders_id değerlerine işaret edebilir; 9999
+böyle bir değer olmadığından INSERT reddedilir. İkinci denemede ise ders_id=4
+hâlâ kayitlar tablosunda kullanıldığından, bu satırı dersler'den silmek
+kayitlar'da "sahipsiz" (orphan) satırlar bırakacağı için PostgreSQL silmeyi
+engeller.
