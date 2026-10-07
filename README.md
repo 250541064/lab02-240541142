@@ -22,7 +22,7 @@ docker exec -it vtys-postgres psql -U vtys -d vtysdb
 
 | Yol | Ne |
 |---|---|
-| `ogrno.txt` | Öğrenci numaranız (ilk iş: doldurun) |
+| `ogrno.txt` | 240541142 |
 | `er/diyagram.mmd` | Görev 1 — Mermaid ER diyagramınız |
 | `sql/` | Görev 2–5 SQL dosyaları |
 | `sonuc/` | Sorgu çıktılarınız ve AI köşesi teslimi |
